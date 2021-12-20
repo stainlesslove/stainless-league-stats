@@ -7,9 +7,13 @@ export default function Home() {
     //ChampionTheme();
 
     return (
-        <div>
-            <SearchBar />
+        <>
+            <div className="flex h-screen">
+                <div className="m-auto">
+                        <SearchBar />
+                </div>
+            </div>
             <WelcomeScreen />
-        </div>
+        </>
     )
 }
