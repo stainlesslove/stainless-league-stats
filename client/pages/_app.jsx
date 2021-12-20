@@ -13,9 +13,9 @@ function MyApp({ Component, pageProps }) {
   //ChampionTheme()
 
   return (
-    <div id="background" className="h-screen saturate-50 contrast-150 bg-center bg-no-repeat bg-cover bg-[url('https://pbs.twimg.com/media/FA83QC5XsAQXueE.jpg')]">
-      <Component {...pageProps} />
-    </div>
+      <div id="background" className="fadeIn h-screen saturate-50 contrast-150 bg-center bg-no-repeat bg-cover bg-[url('https://pbs.twimg.com/media/FA83QC5XsAQXueE.jpg')]">
+        <Component {...pageProps} />
+      </div>
   )
 }
 

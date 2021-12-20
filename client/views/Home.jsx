@@ -1,19 +1,20 @@
 //import ChampionTheme from "../themes/Champions"
-import SearchBar from "../components/SearchBar";
-import WelcomeScreen from "../components/WelcomeScreen";
+import HomeSearchBar from "../components/HomeSearchBar";
+import ThemeChangerButton from "../components/ThemeChangerButton";
 
 export default function Home() {
+  //ChampionTheme();
 
-    //ChampionTheme();
-
-    return (
-        <>
-            <div className="flex h-screen">
-                <div className="m-auto">
-                        <SearchBar />
-                </div>
-            </div>
-            <WelcomeScreen />
-        </>
-    )
+  return (
+    <>
+      <div className="flex h-screen">
+        <div className="m-auto">
+            <HomeSearchBar />
+        </div>
+        <div className="bottom-4 right-4 absolute animate-bounce hover:animate-none hidden md:block">
+            <ThemeChangerButton />
+        </div>
+      </div>
+    </>
+  );
 }

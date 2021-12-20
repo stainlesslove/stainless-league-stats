@@ -1,11 +1,11 @@
 export default function ThemeChangerButton() {
 
+    function ye(){
+        console.log("ye");
+    }
+
     return (
-        <div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                Button
-            </button>
-        </div>
+            <img onClick={ye} draggable="false" className="opacity-30 cursor-pointer object-cover w-14 h-14 rounded-full hover:opacity-100 hover:border-2 border-red-400" src="https://gcdn.thunderstore.io/live/repository/icons/Nines-Katarina-1.2.6.png.256x256_q95.jpg"></img>
     )
 
 }
