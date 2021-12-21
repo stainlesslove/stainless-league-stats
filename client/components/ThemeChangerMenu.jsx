@@ -1,7 +1,7 @@
 export default function ThemeChangerMenu() {
 
     return (
-        <div>
+        <div className="absolute w-full h-full">
         </div>
     )
 

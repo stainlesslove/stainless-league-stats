@@ -2,7 +2,7 @@ import cookie from "js-cookie";
 import * as Vibrant from 'node-vibrant'
 import axios from "axios";
 
-// https://jariz.github.io/vibrant.js/
+// https://jariz.github.io/vibrant.js/ | https://github.com/Vibrant-Colors/node-vibrant
 
 let currentTheme = cookie.get("theme") ? cookie.get("theme") : process.env.NEXT_PUBLIC_DEFAULT_THEME;
 
@@ -35,18 +35,22 @@ export function getChampionIcon(){
     return `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${currentTheme}.png`;
 }
 
-export function getChampionProperties(){
-    let themeOption = {};
-    
-    var vibrant = new Vibrant("https://pbs.twimg.com/media/FA83QC5XsAQXueE.jpg")
+export function getChampionColors(){
 
-    vibrant.getPalette((err, palette) => {
-        
-        themeOption.Champion = currentTheme;
-        themeOption.Colors = palette;
+    let theme = {};
 
+    axios.get(`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentTheme}_0.jpg`)
+    .catch(error => {
+        if(error) cookie.set("theme", process.env.NEXT_PUBLIC_DEFAULT_THEME);
+        cookie.set("theme", "Gwen");
+        currentTheme = process.env.NEXT_PUBLIC_DEFAULT_THEME;
     });
 
-    return themeOption;
+    Vibrant.from(`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentTheme}_0.jpg`)
+        .getPalette()
+        .then((palette) => {theme.pallete = (palette)})
+
+    return theme;
+
 }
 

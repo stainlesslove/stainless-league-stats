@@ -1,11 +1,12 @@
 import HomeSearchBar from "../components/HomeSearchBar";
 import ThemeChangerButton from "../components/ThemeChangerButton";
-import Background from "../components/Background";
+import { getChampionColors } from "../themes/Champions";
 
 export default function Root() {
 
+  console.log(getChampionColors());
+
   return (
-    <Background>
       <div className="flex h-screen">
         <div className="m-auto">
             <HomeSearchBar />
@@ -14,6 +15,5 @@ export default function Root() {
             <ThemeChangerButton />
         </div>
       </div>
-  </Background>
   )
 }
