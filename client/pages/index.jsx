@@ -1,6 +1,7 @@
 import HomeSearchBar from "../components/HomeSearchBar";
 import ThemeChangerButton from "../components/ThemeChangerButton";
 import { getChampionColors } from "../themes/Champions";
+import TextColor from "../components/TextColor";
 
 export default function Root() {
 
@@ -14,6 +15,9 @@ export default function Root() {
         <div className="bottom-4 right-4 absolute animate-bounce hover:animate-none hidden md:block">
             <ThemeChangerButton />
         </div>
+
+        <TextColor />
+
       </div>
   )
 }
