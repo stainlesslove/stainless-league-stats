@@ -1,6 +1,26 @@
+const cookies = require("js-cookie")
+
+function cookieColor(type) {
+  switch (type) {
+    case 1:
+      
+      break;
+    case 2:
+      break;
+    case 3:
+      break;
+    case 4:
+      break;
+    case 5:
+      break;
+    case 6:
+      break;
+  }
+}
+
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",    
+    "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./views/**/*.{js,ts,jsx,tsx}",
   ],
@@ -20,8 +40,8 @@ module.exports = {
         112: '32rem',
         144: '38rem'
       },
-      blur: {        
-        xs: '2px',      
+      blur: {
+        xs: '2px',
       },
     },
   },
