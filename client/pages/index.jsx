@@ -1,7 +1,9 @@
 import HomeSearchBar from "../components/HomeSearchBar";
 import ThemeChangerButton from "../components/ThemeChangerButton";
-import { getChampionColors } from "../themes/Champions";
 import TextColor from "../components/TextColor";
+import Loader from "../components/Loader";
+import { getChampionColors } from "../themes/Champions";
+
 
 export default function Root() {
 
@@ -17,6 +19,7 @@ export default function Root() {
         </div>
 
         <TextColor />
+        {/* <Loader /> */}
 
       </div>
   )
