@@ -4,14 +4,15 @@ import React, {useEffect} from "react";
 export default function ThemeChangerButton() {
 
     function toggle(){
-        let x = document.getElementById("ThemeChangerMenu")
+        let x = document.getElementById("blur_mode");
+        let y = document.getElementById("theme_changer_menu");
 
         if(x.style.display === "none"){
             x.style.display = "block";
         }else{
             x.style.display = "none";
         }
-
+        y.style.display = x.style.display;
     }
 
     useEffect(() => {

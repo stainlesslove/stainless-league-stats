@@ -7,6 +7,7 @@ import axios from "axios";
 let currentTheme = cookie.get("theme") ? cookie.get("theme") : process.env.NEXT_PUBLIC_DEFAULT_THEME;
 
 export function getChampionBackground(){
+
     // https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{Champion}_0.jpg
 
     axios.get(`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentTheme}_0.jpg`)
